@@ -2,8 +2,10 @@ local planet_map_gen = require("prototypes.planet.planet-helioss-map-gen")
 local effects = require("__core__.lualib.surface-render-parameter-effects")
 local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
 local planet_catalogue_aquilo = require("__space-age__.prototypes.planet.procession-catalogue-aquilo")
--- local temperature = settings.startup["surface-temperature"].value
+
 local pressure = settings.startup["surface-pressure"].value
+
+-- local temperature = settings.startup["surface-temperature"].value
 -- local gravity = settings.startup["surface-gravity"].value
 
 --  ClassLuaSpaceLocationPrototype

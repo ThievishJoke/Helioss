@@ -1,5 +1,5 @@
 local MapGen = {}
-
+--uses vulcanus generation as a base
 data:extend({
   ---- Constants
   {
@@ -248,9 +248,7 @@ data:extend({
     -- 600-650 circle
     expression = "1 + vulcanus_starting_area_radius * (300 - distance) / 50"
   },
-
   ---- BIOME NOISE
-
   {
     type = "noise-function",
     name = "vulcanus_biome_noise",
@@ -526,42 +524,6 @@ data:extend({
                                                 output_scale = 150})",
     local_expressions = {scale = 3}
   },
-  --{
-  --  type = "noise-expression",
-  --  name = "vulcanus_hairline_cracks",
-  --  expression = "vulcanus_plasma(15223, 0.3 * vulcanus_cracks_scale, 0.6 * vulcanus_cracks_scale, 0.6, 1)"
-  --},
-  --{
-  --  type = "noise-expression",
-  --  name = "vulcanus_flood_cracks_a",
-  --  expression = "lerp(min(vulcanus_plasma(7543, 2.5 * vulcanus_cracks_scale, 4 * vulcanus_cracks_scale, 0.5, 1),\z
-  --                         vulcanus_plasma(7443, 1.5 * vulcanus_cracks_scale, 3.5 * vulcanus_cracks_scale, 0.5, 1)),\z
-  --                     1,\z
-  --                     clamp(vulcanus_detail_noise(241, 2 * vulcanus_cracks_scale, 2, 0.25), 0, 1))"
-  --},
-  --{
-  --  type = "noise-expression",
-  --  name = "vulcanus_flood_cracks_b",
-  --  expression = "lerp(1,\z
-  --                     min(vulcanus_plasma(12223, 2 * vulcanus_cracks_scale, 3 * vulcanus_cracks_scale, 0.5, 1),\z
-  --                         vulcanus_plasma(152, 1 * vulcanus_cracks_scale, 1.5 * vulcanus_cracks_scale, 0.25, 0.5)) - 0.5,\z
-  --                     clamp(0.2 + vulcanus_detail_noise(821, 6 * vulcanus_cracks_scale, 2, 0.5), 0, 1))"
-  --},
-  --{
-  --  type = "noise-expression",
-  --  name = "vulcanus_flood_paths",
-  --  -- make paths through the lava cracks, get walkable areas above 0, the first value is the path height
-  --  expression = "0.4\z
-  --                - vulcanus_plasma(1543, 1.5 * vulcanus_cracks_scale, 3 * vulcanus_cracks_scale, 0.5, 1)\z
-  --                + min(0, vulcanus_detail_noise(121, vulcanus_cracks_scale * 4, 2, 0.5))",
-  --},
-  --{
-  --  type = "noise-expression",
-  --  name = "vulcanus_flood_basalts_func",
-  --  -- add hairline cracks to break up edges, crop hearilyie cracks peaks so it is more of a plates + cracks pattern
-  --  -- lava level should be 0 and below, solid ground above 0
-  --  expression = "min(max(vulcanus_flood_cracks_a - 0.125, vulcanus_flood_paths), vulcanus_flood_cracks_b) + 0.3 * min(0.5, vulcanus_hairline_cracks)"
-  --},
   {
     type = "noise-expression",
     name = "vulcanus_hairline_cracks",
