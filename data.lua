@@ -1,3 +1,5 @@
+require("__helioss__.prototypes.entity.decorative")
+require("prototypes.item.items")
+require("prototypes.recipe.recipes")
 require("prototypes.planet.planet")
 require("prototypes.technology")
-require("__helioss__.prototypes.entity.decorative")

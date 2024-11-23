@@ -37,5 +37,28 @@ data:extend(
         },
         time = 60
       }
+  },
+  {
+    type = "technology",
+    name = "palusium-crushing",
+    icon = "__terrapalus__/graphics/technology/palusium-crushing.png",
+    icon_size = 256,
+    prerequisites = {""},
+    effects = {
+        {
+            type = "unlock-recipe",
+            recipe = "palusium-crushing"
+        }
+    },
+    unit = {
+        count = 150,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"space-science-pack", 1},
+            {"chemical-science-pack", 1},
+            {"military-science-pack", 1}
+        },
+        time = 30
     }
+  },
 })
