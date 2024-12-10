@@ -6,7 +6,7 @@ data:extend({
         name = "carbon-node",
         type = "simple-entity",
         flags = {"placeable-neutral", "placeable-off-grid"},
-        icon = "__helioss__/graphics/icons/carbon-rock.png",
+        icon = "__helioss__/graphics/icons/carbon-node.png",
         subgroup = "grass",
         order = "b[decorative]-l[rock]-j[carbon-node]",
         collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
